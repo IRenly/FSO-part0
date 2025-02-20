@@ -1,7 +1,8 @@
-# FSO-part0
-Entregables tareas Full Stack Open Parte#0
+# 📌 FSO-part0  
+**Entregables de las tareas de Full Stack Open - Parte 0**  
 
-# Ejercicio 0.4 - Nuevo diagrama de nota
+## 📒 Ejercicio 0.4 - Nuevo diagrama de nota  
+Este diagrama ilustra el proceso de agregar una nueva nota en una aplicación tradicional, donde la página se recarga después de enviar la nota.  
 ```mermaid
 sequenceDiagram
     participant User
@@ -41,7 +42,7 @@ sequenceDiagram
 
     Browser -->> User: observa su nota entre la lista de notas
 ```
-#Ejercicio 0.5 - Diagrama de aplicación de una sola página
+## 📒Ejercicio 0.5 - Diagrama de aplicación de una sola página
 ```mermaid
 sequenceDiagram
     %% Ejercicio 0.5: Acceso a la aplicación SPA
@@ -67,7 +68,7 @@ sequenceDiagram
     Browser -->> User: Renderiza las notas en la página
     deactivate Browser
 ```
-#Ejercicio 0.6 - Nueva nota en diagrama de aplicación de una sola pagina
+## 📒Ejercicio 0.6 - Nueva nota en diagrama de aplicación de una sola pagina
 ```mermaid
 sequenceDiagram
     participant User
