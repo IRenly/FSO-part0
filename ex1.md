@@ -1,29 +1,39 @@
 
 ```mermaid
 sequenceDiagram
-    participant browser
-    participant server
+    participant User
+    participant Browser
+    participant Server
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
-    activate server
-    server-->>browser: HTML document
-    deactivate server
+    User ->> Browser: ingresa a la página
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
-    activate server
-    server-->>browser: CSS file
-    deactivate server
+    Browser ->> Server: HTTP GET /exampleapp/notes
+    Server -->> Browser: HTML code
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
-    activate server
-    server-->>browser: JavaScript file
-    deactivate server
+    Browser ->> Server: HTTP GET /exampleapp/main.css
+    Server -->> Browser: main.css
 
-    Note right of browser: El navegador ejecuta JavaScript para obtener las notas
+    Browser ->> Server: HTTP GET /exampleapp/main.js
+    Server -->> Browser: main.js
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
-    activate server
-    server-->>browser: JSON con las notas guardadas
-    deactivate server
+    Browser ->> Server: HTTP GET /exampleapp/data.json
+    Server -->> Browser: data.json {}
 
-    Note right of browser: Se renderizan las notas sin recargar la página
+    User ->> Browser: escribe la nota en el formulario
+    User ->> Browser: da clic en el botón Save
+
+    Browser ->> Server: HTTP POST /exampleapp/new_note
+    Server -->> Browser: HTTP STATUS CODE 302
+
+    Note right of Browser:  <- Se recarga la pagina
+
+    Browser ->> Server: HTTP GET /exampleapp/main.css
+    Server -->> Browser: main.css
+
+    Browser ->> Server: HTTP GET /exampleapp/main.js
+    Server -->> Browser: main.js
+
+    Browser ->> Server: HTTP GET /exampleapp/data.json
+    Server -->> Browser: data.json {}
+
+    Browser -->> User: observa su nota entre la lista de notas
