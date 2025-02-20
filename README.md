@@ -43,7 +43,12 @@ sequenceDiagram
 ```
 #Ejercicio 0.5 - Diagrama de aplicación de una sola página
 ```mermaid
-%% Ejercicio 0.5: Acceso a la aplicación SPA
+sequenceDiagram
+    %% Ejercicio 0.5: Acceso a la aplicación SPA
+    participant User
+    participant Browser
+    participant Server
+
     User ->> Browser: Ingresa a la página SPA
 
     Browser ->> Server: HTTP GET /spa
@@ -61,4 +66,5 @@ sequenceDiagram
 
     Browser -->> User: Renderiza las notas en la página
     deactivate Browser
-```
+
+
