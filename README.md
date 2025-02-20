@@ -43,6 +43,7 @@ sequenceDiagram
     Browser -->> User: observa su nota entre la lista de notas
 ```
 ## 📒Ejercicio 0.5 - Diagrama de aplicación de una sola página
+Este diagrama muestra cómo una aplicación de una sola página (SPA) carga su contenido sin necesidad de recargar la página completa.
 ```mermaid
 sequenceDiagram
     %% Ejercicio 0.5: Acceso a la aplicación SPA
@@ -69,6 +70,7 @@ sequenceDiagram
     deactivate Browser
 ```
 ## 📒Ejercicio 0.6 - Nueva nota en diagrama de aplicación de una sola pagina
+Aquí se muestra cómo una SPA maneja la creación de una nueva nota sin necesidad de recargar la página.
 ```mermaid
 sequenceDiagram
     participant User
