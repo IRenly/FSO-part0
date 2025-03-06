@@ -1,6 +1,9 @@
 # 📌 FSO-part0  
 **Entregables de las tareas de Full Stack Open - Parte 0**  
 
+![image](https://github.com/user-attachments/assets/5c6cd780-59a8-41a6-bd4a-a6afcc81750e)
+
+
 ## 📒 Ejercicio 0.4 - Nuevo diagrama de nota  
 Este diagrama ilustra el proceso de agregar una nueva nota en una aplicación tradicional, donde la página se recarga después de enviar la nota.  
 ```mermaid
